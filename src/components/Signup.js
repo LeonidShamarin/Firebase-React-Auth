@@ -23,7 +23,7 @@ export default function Signup() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      history.push("/");
+      history("/");
     } catch (error) {
       let errorMessage = "Failed to create an account";
       if (error.code === 'auth/email-already-in-use') {
